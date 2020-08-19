@@ -1,0 +1,13 @@
+
+canvas {
+  border: 1px solid black;
+  position: absolute;
+}
+.genre{
+  z-index:10;
+  position: absolute;
+}
+
+#overlay{
+  position: absolute;
+}

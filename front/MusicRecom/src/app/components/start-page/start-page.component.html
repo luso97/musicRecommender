@@ -1,0 +1,17 @@
+Iyo
+<div>
+  <button mat-button (click)="connectSpotify()" color="primary" flex="100%">Connect to Spotify</button>
+</div>
+<div>
+  <form [formGroup]="formSpotify" *ngIf="playlists">
+    <mat-form-field class="example-full-width" flex="100%"  appearance="outline">
+      <mat-label>Name of rooms</mat-label>
+      <mat-select formControlName="playlist">
+        <mat-option  *ngFor="let playlist of playlists"  [value]="playlist.id">
+          {{playlist.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button (click)="submit()" color="primary" flex="100%">Create</button>
+  </form>
+</div>
