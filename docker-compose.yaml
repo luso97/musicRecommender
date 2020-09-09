@@ -1,0 +1,13 @@
+version: "3"
+
+services:     
+  dj:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:7000
+    ports:
+      - "80:7000"
+  ng:
+    container_name: ng
+    build: ./front
+    ports:
+      - "8080:80"
